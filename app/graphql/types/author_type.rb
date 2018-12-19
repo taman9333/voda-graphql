@@ -10,6 +10,7 @@ module Types
     field :is_alive, Boolean, null: true
     field :full_name, String, null: true
     field :coordinates, Types::CoordinatesType, null: true
+    field :publication_years, [Int], null: true
 
   end
 end

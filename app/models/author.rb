@@ -8,4 +8,8 @@ class Author < ApplicationRecord
     [rand(1000), rand(2000)]
   end
 
+  def publication_years
+    10.times.to_a.map { 1900 - rand(100)}
+  end
+
 end
