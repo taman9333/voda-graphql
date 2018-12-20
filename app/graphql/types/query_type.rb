@@ -1,7 +1,9 @@
 module Types
   class QueryType < Types::BaseObject
 
-    field :author, Types::AuthorType, null: true, description: "Returns one author" do
+    # still need to be refactored, we should move resolver functions
+
+    field :author, AuthorType, null: true, description: "Returns one author" do
       argument :id, ID, required: true
     end
 
@@ -9,7 +11,7 @@ module Types
       Author.find_by(id: id)
     end
 
-    field :authors, [Types::AuthorType], null: false, description: "Get all authors"
+    field :authors, [AuthorType], null: false, description: "Get all authors"
 
     def authors
       Author.all
