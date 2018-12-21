@@ -4,6 +4,8 @@ module Mutations
     null true
     
     type Types::AuthorType
+
+    description 'Create an author'
     
     argument :author, Types::AuthorInputType, required: true
     

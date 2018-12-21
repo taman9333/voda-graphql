@@ -3,6 +3,8 @@ module Mutations
   
     null true
 
+    description 'Update an author'
+
     type Boolean
 
     argument :author, Types::AuthorInputType, required: true
