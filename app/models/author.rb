@@ -13,5 +13,6 @@ class Author < ApplicationRecord
   end
 
   validates :last_name, presence: true
+  validates :yob, presence: true
 
 end
