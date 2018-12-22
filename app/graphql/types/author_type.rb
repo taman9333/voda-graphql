@@ -27,6 +27,12 @@ module Types
     field :full_name, String, null: true
     field :coordinates, Types::CoordinatesType, null: true
     field :publication_years, [Int], null: true
+    
+    field :errors, [Types::ErrorType], null: true
+
+    def errors
+      object.errors.map {|e| {field_name: e, errors: object.errors[e]}}
+    end
 
   end
 end
