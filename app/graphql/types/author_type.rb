@@ -19,20 +19,20 @@ module Types
 
     description "An Author"
 
-    field :id, ID, null: false
+    field :id, ID, null: true
     field :first_name, String, null: true
     field :last_name, String, null: true
-    field :yob, Int, null: false
+    field :yob, Int, null: true
     field :is_alive, Boolean, null: true
     field :full_name, String, null: true
     field :coordinates, Types::CoordinatesType, null: true
     field :publication_years, [Int], null: true
     
-    field :errors, [Types::ErrorType], null: true
+    # field :errors, [Types::ErrorType], null: true
 
-    def errors
-      object.errors.map {|e| {field_name: e, errors: object.errors[e]}}
-    end
+    # def errors
+    #   object.errors.map {|e| {field_name: e, errors: object.errors[e]}}
+    # end
 
   end
 end

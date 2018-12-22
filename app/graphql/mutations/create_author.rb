@@ -3,7 +3,7 @@ module Mutations
 
     null true
     
-    type Types::AuthorType
+    type Types::CreateAuthorPayload
 
     description 'Create an author'
     
