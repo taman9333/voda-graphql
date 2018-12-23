@@ -8,7 +8,7 @@ module Types
     end
 
     def author(id:)
-      Author.find_by(id: id)
+      Author.find(id)
     end
 
     field :authors, [AuthorType], null: false, description: "Get all authors"
