@@ -5,6 +5,7 @@ module Types
 
     field :field_name, String, null: false, camelize: false
     field :errors, [String], null: false
+    field :status_code, Int, null: false
 
   end
 end
