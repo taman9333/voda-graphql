@@ -20,5 +20,9 @@ module Mutations
       end
     end
 
+    def self.accessible?(context)
+      context[:current_user].present?
+    end
+
   end
 end

@@ -8,6 +8,10 @@ module Types
     end
 
     def author(id:)
+      # if context[:current_user].blank?
+      #   raise GraphQL::ExecutionError.new("Authentication required")
+      # end
+      # Author.find(context[:current_user][:user_id])
       Author.find(id)
     end
 
