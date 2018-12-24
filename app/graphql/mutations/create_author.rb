@@ -1,5 +1,5 @@
 module Mutations
-  class CreateAuthor < GraphQL::Schema::Mutation
+  class CreateAuthor < BaseMutation
 
     null true
     
@@ -18,10 +18,6 @@ module Mutations
       else
         { errors: record.errors.map {|e| {field_name: e, errors: record.errors[e]}}}
       end
-    end
-
-    def self.accessible?(context)
-      context[:current_user].present?
     end
 
   end
